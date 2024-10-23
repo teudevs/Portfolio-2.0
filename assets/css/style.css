@@ -6,6 +6,7 @@
   box-sizing: border-box;
 
   font-family: "DM Sans", sans-serif;
+  zoom: none;
 }
 
 :root {
@@ -39,7 +40,7 @@ body {
   font-size: 1.6rem;
   text-align: center;
 
-  overflow-x: hidden;
+  overflow: overlay;
 
   background-color: var(--bg-color);
 }
