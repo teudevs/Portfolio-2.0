@@ -6,7 +6,6 @@
   box-sizing: border-box;
 
   font-family: "DM Sans", sans-serif;
-  zoom: none;
 }
 
 :root {
@@ -146,6 +145,8 @@ section span {
   gap: 1.6rem;
 
   position: relative;
+
+  transition: 400ms;
 }
 
 body.light-mode .button,
@@ -190,6 +191,10 @@ body.light-mode .button:hover {
 .social-links svg:hover {
   margin-top: 0;
   margin-bottom: 0.3rem;
+}
+
+body .social-links li svg path {
+  transition: 200ms;
 }
 
 body nav#navigation .social-links li:nth-child(1) svg:hover path,
@@ -442,7 +447,8 @@ body.menu-expanded button path {
 }
 
 #home .typing {
-  animation: line-typing 500ms steps(40) infinite normal, typing 2s steps(40) 1.4s normal backwards;
+  animation: line-typing 500ms steps(40) infinite normal,
+    typing 2s steps(40) 1.4s normal backwards;
 }
 
 @keyframes typing {
@@ -466,13 +472,14 @@ body.menu-expanded button path {
 #home .button {
   margin-inline: auto;
 }
+
 #home .col-b {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
 
-
+  animation: flutuar 3s infinite backwards;
   position: relative;
 }
 
@@ -501,6 +508,8 @@ body.menu-expanded button path {
   position: absolute;
   bottom: -3.1rem;
   z-index: -1;
+
+  animation: appear 1s 500ms backwards;
 }
 
 #home img {
@@ -519,6 +528,10 @@ body.light-mode #home img#notebook-2 {
   animation: none;
 }
 
+#home img#notebook-1 {
+  animation: appear 1s 1s backwards;
+}
+
 #home img#notebook-2-white {
   position: absolute;
 }
@@ -532,12 +545,15 @@ body.light-mode #home img#notebook-2-white {
 #home img#notebook-2 {
   position: absolute;
   z-index: 90;
+  animation: appear 1s 2s backwards;
 }
 
 #home img#vidro {
   position: absolute;
   z-index: 100;
   right: -2rem;
+  animation: appear-vidro 1s 2.3s backwards;
+
   filter: contrast(5);
 }
 
@@ -591,7 +607,7 @@ body.light-mode #home img#notebook-2-white {
   border-radius: 2rem;
   box-shadow: 0 0 2rem black;
 
-  transition: 600ms
+  transition: 600ms;
 }
 
 /*===== PROJECTS ===============================================*/
@@ -668,7 +684,7 @@ body.light-mode #home img#notebook-2-white {
 }
 
 #projects .card .img-wrapper {
-  width: 200%;
+  width: 100%;
   position: relative;
 }
 
@@ -677,6 +693,7 @@ body.light-mode #home img#notebook-2-white {
   height: 20rem;
   object-fit: cover;
   border-radius: 0.6rem;
+
   transition: 300ms;
 }
 
@@ -786,9 +803,7 @@ body.light-mode #home img#notebook-2-white {
 #knowledge .card img {
   width: 10rem;
 }
-.net{
-  width: 150px !important;  
-}
+
 /*===== CONTACT ===============================================*/
 
 #contact {
@@ -1016,7 +1031,6 @@ footer .social-links li:nth-child(4) svg path:nth-child(2) {
   transform: translateY(0);
 }
 
-/*===== RESPONSIVO (DESKTOP) ====================================*/
 /*===== RESPONSIVO (DESKTOP) ====================================*/
 
 @media (min-width: 1024px) {
