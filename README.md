@@ -6,7 +6,7 @@
 
 ## 💻 Sobre
 
-Projeto feito no intuito de me apresentar, como desenvolvedor web front-end.
+Projeto feito no intuito de me apresentar, como desenvolvedor mobile e web, Back-end.
 
 ## 🤯 O site é composto por:
 
